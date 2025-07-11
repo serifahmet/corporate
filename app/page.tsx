@@ -1,4 +1,11 @@
+'use client';
+
+import {useTranslations} from 'next-intl';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+
 export default function HomePage() {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -6,18 +13,21 @@ export default function HomePage() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Global Translation Services
+              {t('common.companyName')}
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600">About</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600">Services</a>
-              <a href="#languages" className="text-gray-700 hover:text-blue-600">Languages</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+              <a href="#home" className="text-gray-700 hover:text-blue-600">{t('common.navigation.home')}</a>
+              <a href="#about" className="text-gray-700 hover:text-blue-600">{t('common.navigation.about')}</a>
+              <a href="#services" className="text-gray-700 hover:text-blue-600">{t('common.navigation.services')}</a>
+              <a href="#languages" className="text-gray-700 hover:text-blue-600">{t('common.navigation.languages')}</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600">{t('common.navigation.contact')}</a>
             </div>
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-              Get Quote
-            </button>
+            <div className="flex items-center space-x-4">
+              <LanguageSwitcher />
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                {t('common.cta.getQuote')}
+              </button>
+            </div>
           </div>
         </nav>
       </header>
@@ -26,17 +36,17 @@ export default function HomePage() {
       <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
         <div className="text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Professional Translation & Localization Services
+            {t('homepage.hero.title')}
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-            Trusted by Fortune 500 companies worldwide for accurate, culturally-adapted content in over 100 languages
+            {t('homepage.hero.subtitle')}
           </p>
           <div className="space-x-4">
             <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
-              Get Started Today
+              {t('homepage.hero.cta')}
             </button>
             <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all">
-              Learn More
+              {t('common.cta.learnMore')}
             </button>
           </div>
         </div>
@@ -48,23 +58,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Excellence in Language Services
+                {t('homepage.about.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                With over 20 years of experience, we provide comprehensive translation, localization, and interpreting services to global enterprises.
+                {t('homepage.about.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">ISO 17100:2015 Certified Quality</p>
+                  <p className="text-gray-700">{t('homepage.about.features.quality')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">10,000+ Professional Linguists</p>
+                  <p className="text-gray-700">{t('homepage.about.features.experts')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">100+ Languages Supported</p>
+                  <p className="text-gray-700">{t('homepage.about.features.languages')}</p>
                 </div>
               </div>
             </div>
@@ -91,7 +101,7 @@ export default function HomePage() {
             {/* Text Content - Now on the right */}
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">
-                Our Services
+                {t('homepage.services.title')}
               </h2>
               <div className="space-y-6">
                 <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
@@ -99,10 +109,10 @@ export default function HomePage() {
                     <div className="text-blue-600 text-2xl mt-1">📄</div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Document Translation
+                        {t('homepage.services.translation.title')}
                       </h3>
                       <p className="text-gray-600">
-                        Professional translation for legal, technical, medical, and business documents
+                        {t('homepage.services.translation.description')}
                       </p>
                     </div>
                   </div>
@@ -113,10 +123,10 @@ export default function HomePage() {
                     <div className="text-blue-600 text-2xl mt-1">💻</div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Software Localization
+                        {t('homepage.services.localization.title')}
                       </h3>
                       <p className="text-gray-600">
-                        Adapt your software, apps, and games for global markets
+                        {t('homepage.services.localization.description')}
                       </p>
                     </div>
                   </div>
@@ -127,10 +137,10 @@ export default function HomePage() {
                     <div className="text-blue-600 text-2xl mt-1">🎧</div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Interpreting Services
+                        {t('homepage.services.interpreting.title')}
                       </h3>
                       <p className="text-gray-600">
-                        On-site, remote, and conference interpreting solutions
+                        {t('homepage.services.interpreting.description')}
                       </p>
                     </div>
                   </div>
@@ -146,33 +156,33 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Languages We Support
+              {t('homepage.languages.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              Select a language to learn more about our specialized services
+              {t('homepage.languages.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
-              { flag: '🇬🇧', name: 'English' },
-              { flag: '🇩🇪', name: 'German' },
-              { flag: '🇫🇷', name: 'French' },
-              { flag: '🇪🇸', name: 'Spanish' },
-              { flag: '🇮🇹', name: 'Italian' },
-              { flag: '🇵🇹', name: 'Portuguese' },
-              { flag: '🇷🇺', name: 'Russian' },
-              { flag: '🇨🇳', name: 'Chinese' },
-              { flag: '🇯🇵', name: 'Japanese' },
-              { flag: '🇸🇦', name: 'Arabic' },
-              { flag: '🇹🇷', name: 'Turkish' },
-              { flag: '🇰🇷', name: 'Korean' }
+              { flag: '🇬🇧', key: 'english' },
+              { flag: '🇩🇪', key: 'german' },
+              { flag: '🇫🇷', key: 'french' },
+              { flag: '🇪🇸', key: 'spanish' },
+              { flag: '🇮🇹', key: 'italian' },
+              { flag: '🇵🇹', key: 'portuguese' },
+              { flag: '🇷🇺', key: 'russian' },
+              { flag: '🇨🇳', key: 'chinese' },
+              { flag: '🇯🇵', key: 'japanese' },
+              { flag: '🇸🇦', key: 'arabic' },
+              { flag: '🇹🇷', key: 'turkish' },
+              { flag: '🇰🇷', key: 'korean' }
             ].map((lang) => (
-              <div key={lang.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer group">
+              <div key={lang.key} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer group">
                 <div className="flex items-center space-x-4">
                   <span className="text-4xl">{lang.flag}</span>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      {lang.name}
+                      {t(`languages.${lang.key}`)}
                     </h3>
                     <p className="text-sm text-gray-500 mt-1">Professional Services</p>
                   </div>
@@ -336,13 +346,13 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Global Translation Services
+              {t('common.companyName')}
             </h3>
             <p className="text-gray-400 mb-6">
               Professional translation and localization services trusted by Fortune 500 companies worldwide.
             </p>
             <p className="text-gray-400">
-              © 2024 Global Translation Services. All rights reserved.
+              {t('footer.copyright')}
             </p>
           </div>
         </div>
