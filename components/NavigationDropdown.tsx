@@ -28,10 +28,14 @@ export default function NavigationDropdown({ label, items }: NavigationDropdownP
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div 
+      className="relative" 
+      ref={dropdownRef}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <button
         className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors py-2 px-3"
-        onMouseEnter={() => setIsOpen(true)}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{label}</span>
@@ -47,7 +51,6 @@ export default function NavigationDropdown({ label, items }: NavigationDropdownP
 
       <div 
         className={`dropdown-menu ${isOpen ? 'show' : ''}`}
-        onMouseLeave={() => setIsOpen(false)}
       >
         {items.map((item, index) => (
           <a
