@@ -2,12 +2,51 @@
 
 import {useTranslations} from 'next-intl';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import Script from 'next/script';
 
 export default function HomePage() {
   const t = useTranslations();
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TranslationService",
+    "name": "cevirim.com",
+    "alternateName": "Profesyonel Çeviri Hizmetleri",
+    "url": "https://cevirim.com",
+    "logo": "https://cevirim.com/logo.png",
+    "description": "100'den fazla dilde profesyonel çeviri, yerelleştirme ve tercümanlık hizmetleri",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.0082",
+      "longitude": "28.9784"
+    },
+    "sameAs": [
+      "https://twitter.com/cevirimcom",
+      "https://facebook.com/cevirimcom",
+      "https://linkedin.com/company/cevirimcom"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["Turkish", "English", "German", "French", "Spanish", "Arabic"]
+    },
+    "areaServed": "Worldwide",
+    "serviceType": ["Document Translation", "Software Localization", "Interpreting Services"],
+    "priceRange": "$$"
+  };
+
   return (
-    <div className="min-h-screen">
+    <>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="min-h-screen">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="container mx-auto px-4 py-4">
@@ -358,5 +397,6 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
