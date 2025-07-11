@@ -2,6 +2,7 @@
 
 import {useTranslations} from 'next-intl';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import NavigationDropdown from '../components/NavigationDropdown';
 import Script from 'next/script';
 
 export default function HomePage() {
@@ -46,25 +47,61 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-[#0d1117]">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <nav className="container mx-auto px-4 py-4">
+      <header className="border-b border-[#30363d]">
+        <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            {/* Logo */}
+            <div className="text-2xl font-bold text-white">
               {t('common.companyName')}
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-blue-600">{t('common.navigation.home')}</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600">{t('common.navigation.about')}</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600">{t('common.navigation.services')}</a>
-              <a href="#languages" className="text-gray-700 hover:text-blue-600">{t('common.navigation.languages')}</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600">{t('common.navigation.contact')}</a>
+            
+            {/* Center Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <NavigationDropdown 
+                label={t('navigation.product')}
+                items={[
+                  { label: t('navigation.dropdown.documentTranslation'), href: '#' },
+                  { label: t('navigation.dropdown.softwareLocalization'), href: '#' },
+                  { label: t('navigation.dropdown.interpretingServices'), href: '#' },
+                  { label: t('navigation.dropdown.machineTranslation'), href: '#' },
+                ]}
+              />
+              <NavigationDropdown 
+                label={t('navigation.solutions')}
+                items={[
+                  { label: t('industries.technology'), href: '#' },
+                  { label: t('industries.healthcare'), href: '#' },
+                  { label: t('industries.finance'), href: '#' },
+                  { label: t('industries.legal'), href: '#' },
+                ]}
+              />
+              <NavigationDropdown 
+                label={t('navigation.resources')}
+                items={[
+                  { label: t('navigation.dropdown.blog'), href: '#' },
+                  { label: t('navigation.dropdown.caseStudies'), href: '#' },
+                  { label: t('navigation.dropdown.faq'), href: '#' },
+                  { label: t('navigation.dropdown.apiDocs'), href: '#' },
+                ]}
+              />
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                {t('navigation.enterprise')}
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                {t('navigation.pricing')}
+              </a>
             </div>
+            
+            {/* Right side buttons */}
             <div className="flex items-center space-x-4">
               <LanguageSwitcher />
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                {t('common.cta.getQuote')}
+              <button className="text-gray-300 hover:text-white transition-colors">
+                {t('common.cta.signIn')}
+              </button>
+              <button className="btn-outline">
+                {t('common.cta.signUp')}
               </button>
             </div>
           </div>
@@ -72,53 +109,112 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
-        <div className="text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section id="home" className="hero-gradient min-h-[90vh] flex items-center justify-center relative">
+        <div className="container mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white max-w-5xl mx-auto leading-tight">
             {t('homepage.hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl mb-12 text-[#b1b2b3] max-w-3xl mx-auto">
             {t('homepage.hero.subtitle')}
           </p>
-          <div className="space-x-4">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
-              {t('homepage.hero.cta')}
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all">
-              {t('common.cta.learnMore')}
-            </button>
+          
+          {/* Email signup form */}
+          <div className="max-w-2xl mx-auto">
+            <form className="flex flex-col md:flex-row gap-4 justify-center items-center">
+              <input
+                type="email"
+                placeholder={t('homepage.hero.emailPlaceholder')}
+                className="w-full md:w-96 px-6 py-4 rounded-lg bg-[#161b22] border border-[#30363d] text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+              />
+              <div className="flex gap-4 w-full md:w-auto">
+                <button type="submit" className="btn-primary whitespace-nowrap">
+                  {t('common.cta.getStartedFree')}
+                </button>
+                <button type="button" className="btn-outline whitespace-nowrap">
+                  {t('common.cta.requestDemo')}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        {/* Floating elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Document icon */}
+          <div className="absolute top-20 left-10 md:left-20 float-animation float-animation-delay-1">
+            <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-purple-500/20 backdrop-blur-sm flex items-center justify-center">
+              <svg className="w-8 h-8 md:w-12 md:h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Globe icon */}
+          <div className="absolute top-40 right-10 md:right-32 float-animation float-animation-delay-2">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-blue-500/20 backdrop-blur-sm flex items-center justify-center">
+              <svg className="w-10 h-10 md:w-14 md:h-14 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Headphones icon */}
+          <div className="absolute bottom-20 left-20 md:left-40 float-animation float-animation-delay-3">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-pink-500/20 backdrop-blur-sm flex items-center justify-center">
+              <svg className="w-8 h-8 md:w-10 md:h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Code Preview Section */}
+      <section className="py-16 relative">
+        <div className="container mx-auto px-6">
+          <div className="glass-effect p-8 max-w-4xl mx-auto">
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-400 text-2xl">💡</div>
+              <div>
+                <p className="text-gray-300 mb-2">{`// Örnek çeviri kodu`}</p>
+                <p className="text-white font-mono">
+                  translate(<span className="text-green-400">{`"Merhaba Dünya"`}</span>, <span className="text-blue-400">{`"tr"`}</span>, <span className="text-blue-400">{`"en"`}</span>) 
+                  <span className="text-gray-500">{` // "Hello World"`}</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-gray-50">
+      <section id="about" className="py-24 bg-[#0d1117]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 {t('homepage.about.title')}
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 {t('homepage.about.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">{t('homepage.about.features.quality')}</p>
+                  <span className="text-green-400 text-xl">✓</span>
+                  <p className="text-gray-300">{t('homepage.about.features.quality')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">{t('homepage.about.features.experts')}</p>
+                  <span className="text-green-400 text-xl">✓</span>
+                  <p className="text-gray-300">{t('homepage.about.features.experts')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-blue-600 text-xl">✓</span>
-                  <p className="text-gray-700">{t('homepage.about.features.languages')}</p>
+                  <span className="text-green-400 text-xl">✓</span>
+                  <p className="text-gray-300">{t('homepage.about.features.languages')}</p>
                 </div>
               </div>
             </div>
-            <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+            <div className="relative h-96 bg-[#161b22] rounded-lg overflow-hidden border border-[#30363d]">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-600">
                 Professional Team Image
               </div>
             </div>
@@ -127,58 +223,58 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-24 bg-[#161b22]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image - Now on the left */}
-            <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden shadow-xl order-2 lg:order-1">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+            <div className="relative h-96 bg-[#0d1117] rounded-lg overflow-hidden border border-[#30363d] order-2 lg:order-1">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-600">
                 Language Services Overview
               </div>
             </div>
 
             {/* Text Content - Now on the right */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">
+              <h2 className="text-4xl font-bold text-white mb-8">
                 {t('homepage.services.title')}
               </h2>
               <div className="space-y-6">
-                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                <div className="bg-[#0d1117] p-6 rounded-lg hover:bg-[#161b22] transition-colors cursor-pointer group border border-[#30363d]">
                   <div className="flex items-start space-x-4">
-                    <div className="text-blue-600 text-2xl mt-1">📄</div>
+                    <div className="text-purple-400 text-2xl mt-1">📄</div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">
                         {t('homepage.services.translation.title')}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-400">
                         {t('homepage.services.translation.description')}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                <div className="bg-[#0d1117] p-6 rounded-lg hover:bg-[#161b22] transition-colors cursor-pointer group border border-[#30363d]">
                   <div className="flex items-start space-x-4">
-                    <div className="text-blue-600 text-2xl mt-1">💻</div>
+                    <div className="text-blue-400 text-2xl mt-1">💻</div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">
                         {t('homepage.services.localization.title')}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-400">
                         {t('homepage.services.localization.description')}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                <div className="bg-[#0d1117] p-6 rounded-lg hover:bg-[#161b22] transition-colors cursor-pointer group border border-[#30363d]">
                   <div className="flex items-start space-x-4">
-                    <div className="text-blue-600 text-2xl mt-1">🎧</div>
+                    <div className="text-pink-400 text-2xl mt-1">🎧</div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">
                         {t('homepage.services.interpreting.title')}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-400">
                         {t('homepage.services.interpreting.description')}
                       </p>
                     </div>
@@ -190,14 +286,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Languages Section */}
-      <section id="languages" className="py-24 bg-gray-50">
+      {/* Languages Section - Hidden for now */}
+      {/* <section id="languages" className="py-24 bg-[#0d1117]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               {t('homepage.languages.title')}
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-400">
               {t('homepage.languages.subtitle')}
             </p>
           </div>
@@ -230,10 +326,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Industries Section */}
-      <section id="industries" className="py-24 bg-white">
+      {/* Industries Section - Hidden for now */}
+      {/* <section id="industries" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -265,10 +361,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-gray-50">
+      {/* Testimonials Section - Hidden for now */}
+      {/* <section id="testimonials" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -323,10 +419,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-white">
+      {/* Contact Section - Hidden for now */}
+      {/* <section id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -378,10 +474,10 @@ export default function HomePage() {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-[#0d1117] border-t border-[#30363d] py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -390,7 +486,7 @@ export default function HomePage() {
             <p className="text-gray-400 mb-6">
               Professional translation and localization services trusted by Fortune 500 companies worldwide.
             </p>
-            <p className="text-gray-400">
+            <p className="text-gray-500">
               {t('footer.copyright')}
             </p>
           </div>

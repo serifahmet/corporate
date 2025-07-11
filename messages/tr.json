@@ -14,14 +14,19 @@
       "learnMore": "Daha Fazla",
       "contactUs": "Bize Ulaşın",
       "submit": "Gönder",
-      "orderNow": "Şimdi Sipariş Ver"
+      "orderNow": "Şimdi Sipariş Ver",
+      "signIn": "Giriş Yap",
+      "signUp": "Üye Ol",
+      "getStartedFree": "Ücretsiz Başla",
+      "requestDemo": "Demo İste"
     }
   },
   "homepage": {
     "hero": {
-      "title": "Profesyonel Çeviri ve Yerelleştirme Hizmetleri",
-      "subtitle": "100'den fazla dilde doğru ve kültürel olarak uyarlanmış içerik için dünya çapında Fortune 500 şirketlerinin güvendiği",
-      "cta": "Bugün Başlayın"
+      "title": "Tek platformda profesyonel çeviri ve yerelleştirme",
+      "subtitle": "Dünyanın en güvenilir AI destekli çeviri platformuna katılın.",
+      "cta": "Bugün Başlayın",
+      "emailPlaceholder": "E-posta adresinizi girin"
     },
     "about": {
       "title": "Dil Hizmetlerinde Mükemmellik",
@@ -111,6 +116,25 @@
       "required": "Bu alan zorunludur",
       "emailInvalid": "Lütfen geçerli bir e-posta girin",
       "phoneInvalid": "Lütfen geçerli bir telefon numarası girin"
+    }
+  },
+  "navigation": {
+    "product": "Ürün",
+    "solutions": "Çözümler",
+    "resources": "Kaynaklar",
+    "enterprise": "Kurumsal",
+    "pricing": "Fiyatlandırma",
+    "dropdown": {
+      "documentTranslation": "Belge Çevirisi",
+      "softwareLocalization": "Yazılım Yerelleştirme",
+      "interpretingServices": "Tercümanlık Hizmetleri",
+      "machineTranslation": "Makine Çevirisi",
+      "websiteTranslation": "Web Sitesi Çevirisi",
+      "videoSubtitling": "Video Altyazı",
+      "blog": "Blog",
+      "caseStudies": "Başarı Hikayeleri",
+      "faq": "Sıkça Sorulan Sorular",
+      "apiDocs": "API Dokümantasyonu"
     }
   },
   "footer": {

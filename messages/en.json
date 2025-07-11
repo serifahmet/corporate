@@ -14,14 +14,19 @@
       "learnMore": "Learn More",
       "contactUs": "Contact Us",
       "submit": "Submit",
-      "orderNow": "Order Now"
+      "orderNow": "Order Now",
+      "signIn": "Sign in",
+      "signUp": "Sign up",
+      "getStartedFree": "Get Started Free",
+      "requestDemo": "Request Demo"
     }
   },
   "homepage": {
     "hero": {
-      "title": "Professional Translation & Localization Services",
-      "subtitle": "Trusted by Fortune 500 companies worldwide for accurate, culturally-adapted content in over 100 languages",
-      "cta": "Get Started Today"
+      "title": "Build and ship translations on a single, collaborative platform",
+      "subtitle": "Join the world's most trusted AI-powered translation platform.",
+      "cta": "Get Started Today",
+      "emailPlaceholder": "Enter your email"
     },
     "about": {
       "title": "Excellence in Language Services",
@@ -111,6 +116,25 @@
       "required": "This field is required",
       "emailInvalid": "Please enter a valid email",
       "phoneInvalid": "Please enter a valid phone number"
+    }
+  },
+  "navigation": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "enterprise": "Enterprise",
+    "pricing": "Pricing",
+    "dropdown": {
+      "documentTranslation": "Document Translation",
+      "softwareLocalization": "Software Localization",
+      "interpretingServices": "Interpreting Services",
+      "machineTranslation": "Machine Translation",
+      "websiteTranslation": "Website Translation",
+      "videoSubtitling": "Video Subtitling",
+      "blog": "Blog",
+      "caseStudies": "Case Studies",
+      "faq": "FAQ",
+      "apiDocs": "API Documentation"
     }
   },
   "footer": {
