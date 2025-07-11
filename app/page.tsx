@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
-import { defaultLocale } from '@/i18n';
 
 export default function RootPage() {
-  redirect(`/${defaultLocale}`);
+  // This will be handled by the middleware, but as a fallback
+  redirect('/en');
 }

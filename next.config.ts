@@ -7,10 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['localhost'],
   },
-  turbopack: {
-    resolveAlias: {
-      // Turbopack aliases if needed
-    },
+  // Remove turbopack config for production
+  experimental: {
+    // Any experimental features can go here
   },
 };
 
