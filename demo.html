@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Translation Services - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1e3a8a, #7c3aed, #ec4899, #3b82f6);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Global Translation Services
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#languages" class="text-gray-700 hover:text-blue-600">Languages</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Get Quote
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg">
+        <div class="text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Professional Translation & Localization Services
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Trusted by Fortune 500 companies worldwide for accurate, culturally-adapted content in over 100 languages
+            </p>
+            <div class="space-x-4">
+                <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all">
+                    Get Started Today
+                </button>
+                <button class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        Excellence in Language Services
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        With over 20 years of experience, we provide comprehensive translation, localization, and interpreting services to global enterprises. Our team of certified linguists ensures accuracy, cultural relevance, and timely delivery.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 text-xl">✓</span>
+                            <p class="text-gray-700">ISO 17100:2015 Certified Quality</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 text-xl">✓</span>
+                            <p class="text-gray-700">10,000+ Professional Linguists</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 text-xl">✓</span>
+                            <p class="text-gray-700">100+ Languages Supported</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 text-xl">✓</span>
+                            <p class="text-gray-700">24/7 Project Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-96 bg-gray-200 rounded-lg overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-500">
+                        Professional Team Image
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Languages We Support
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Select a language to learn more about our specialized services
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇬🇧</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">English</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇩🇪</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">German</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇫🇷</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">French</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇪🇸</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Spanish</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇮🇹</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Italian</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇵🇹</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Portuguese</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇷🇺</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Russian</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇨🇳</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Chinese</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇯🇵</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Japanese</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇸🇦</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Arabic</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇹🇷</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Turkish</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-4xl">🇰🇷</span>
+                        <div>
+                            <h3 class="text-xl font-semibold">Korean</h3>
+                            <p class="text-sm text-gray-500">Professional Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Contact us for a free consultation and quote
+                </p>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <form class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">
+                    Global Translation Services
+                </h3>
+                <p class="text-gray-400 mb-6">
+                    Professional translation and localization services trusted by Fortune 500 companies worldwide.
+                </p>
+                <p class="text-gray-400">
+                    © 2024 Global Translation Services. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

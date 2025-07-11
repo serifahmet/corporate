@@ -1,0 +1,125 @@
+{
+  "common": {
+    "companyName": "Global Çeviri Hizmetleri",
+    "navigation": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımızda",
+      "services": "Hizmetler",
+      "languages": "Diller",
+      "industries": "Sektörler",
+      "contact": "İletişim"
+    },
+    "cta": {
+      "getQuote": "Teklif Al",
+      "learnMore": "Daha Fazla",
+      "contactUs": "Bize Ulaşın",
+      "submit": "Gönder",
+      "orderNow": "Şimdi Sipariş Ver"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Profesyonel Çeviri ve Yerelleştirme Hizmetleri",
+      "subtitle": "100'den fazla dilde doğru ve kültürel olarak uyarlanmış içerik için dünya çapında Fortune 500 şirketlerinin güvendiği",
+      "cta": "Bugün Başlayın"
+    },
+    "about": {
+      "title": "Dil Hizmetlerinde Mükemmellik",
+      "description": "20 yılı aşkın deneyimimizle, küresel işletmelere kapsamlı çeviri, yerelleştirme ve tercümanlık hizmetleri sunuyoruz. Sertifikalı dilbilimcilerden oluşan ekibimiz doğruluk, kültürel uygunluk ve zamanında teslimat sağlar.",
+      "features": {
+        "quality": "ISO 17100:2015 Sertifikalı Kalite",
+        "experts": "10.000+ Profesyonel Dilbilimci",
+        "languages": "100+ Desteklenen Dil",
+        "availability": "7/24 Proje Desteği"
+      }
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "translation": {
+        "title": "Belge Çevirisi",
+        "description": "Hukuki, teknik, tıbbi ve ticari belgeler için profesyonel çeviri"
+      },
+      "localization": {
+        "title": "Yazılım Yerelleştirme",
+        "description": "Yazılımlarınızı, uygulamalarınızı ve oyunlarınızı küresel pazarlara uyarlayın"
+      },
+      "interpreting": {
+        "title": "Tercümanlık Hizmetleri",
+        "description": "Yerinde, uzaktan ve konferans tercümanlığı çözümleri"
+      }
+    },
+    "languages": {
+      "title": "Desteklediğimiz Diller",
+      "subtitle": "Özel hizmetlerimiz hakkında daha fazla bilgi için bir dil seçin"
+    },
+    "industries": {
+      "title": "Hizmet Verdiğimiz Sektörler",
+      "subtitle": "Çeşitli sektörlerde uzmanlaşmış deneyim"
+    },
+    "testimonials": {
+      "title": "Müşterilerimiz Ne Diyor",
+      "subtitle": "Dünya çapında lider şirketler tarafından güvenilen"
+    }
+  },
+  "languages": {
+    "english": "İngilizce",
+    "german": "Almanca",
+    "french": "Fransızca",
+    "spanish": "İspanyolca",
+    "italian": "İtalyanca",
+    "portuguese": "Portekizce",
+    "russian": "Rusça",
+    "chinese": "Çince",
+    "japanese": "Japonca",
+    "arabic": "Arapça",
+    "turkish": "Türkçe",
+    "korean": "Korece"
+  },
+  "industries": {
+    "technology": "Teknoloji",
+    "healthcare": "Sağlık",
+    "finance": "Finans",
+    "legal": "Hukuk",
+    "manufacturing": "İmalat",
+    "retail": "Perakende",
+    "education": "Eğitim",
+    "government": "Devlet"
+  },
+  "forms": {
+    "contact": {
+      "title": "İletişime Geçin",
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "company": "Şirket Adı",
+      "service": "Hizmet Türü",
+      "message": "Mesaj",
+      "success": "Teşekkürler! 24 saat içinde size geri döneceğiz.",
+      "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
+    },
+    "order": {
+      "title": "Çeviri Teklifi İsteyin",
+      "sourceLanguage": "Kaynak Dil",
+      "targetLanguage": "Hedef Dil",
+      "documentType": "Belge Türü",
+      "wordCount": "Kelime Sayısı",
+      "deadline": "Teslim Tarihi",
+      "fileUpload": "Dosya Yükle",
+      "additionalNotes": "Ek Notlar"
+    },
+    "validation": {
+      "required": "Bu alan zorunludur",
+      "emailInvalid": "Lütfen geçerli bir e-posta girin",
+      "phoneInvalid": "Lütfen geçerli bir telefon numarası girin"
+    }
+  },
+  "footer": {
+    "company": "Şirket",
+    "services": "Hizmetler",
+    "resources": "Kaynaklar",
+    "contact": "İletişim",
+    "copyright": "© 2024 Global Çeviri Hizmetleri. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları"
+  }
+}

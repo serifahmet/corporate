@@ -1,0 +1,125 @@
+{
+  "common": {
+    "companyName": "Global Translation Services",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "languages": "Languages",
+      "industries": "Industries",
+      "contact": "Contact"
+    },
+    "cta": {
+      "getQuote": "Get Quote",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us",
+      "submit": "Submit",
+      "orderNow": "Order Now"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Professional Translation & Localization Services",
+      "subtitle": "Trusted by Fortune 500 companies worldwide for accurate, culturally-adapted content in over 100 languages",
+      "cta": "Get Started Today"
+    },
+    "about": {
+      "title": "Excellence in Language Services",
+      "description": "With over 20 years of experience, we provide comprehensive translation, localization, and interpreting services to global enterprises. Our team of certified linguists ensures accuracy, cultural relevance, and timely delivery.",
+      "features": {
+        "quality": "ISO 17100:2015 Certified Quality",
+        "experts": "10,000+ Professional Linguists",
+        "languages": "100+ Languages Supported",
+        "availability": "24/7 Project Support"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "translation": {
+        "title": "Document Translation",
+        "description": "Professional translation for legal, technical, medical, and business documents"
+      },
+      "localization": {
+        "title": "Software Localization",
+        "description": "Adapt your software, apps, and games for global markets"
+      },
+      "interpreting": {
+        "title": "Interpreting Services",
+        "description": "On-site, remote, and conference interpreting solutions"
+      }
+    },
+    "languages": {
+      "title": "Languages We Support",
+      "subtitle": "Select a language to learn more about our specialized services"
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "Specialized expertise across diverse sectors"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Trusted by leading companies worldwide"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "german": "German",
+    "french": "French",
+    "spanish": "Spanish",
+    "italian": "Italian",
+    "portuguese": "Portuguese",
+    "russian": "Russian",
+    "chinese": "Chinese",
+    "japanese": "Japanese",
+    "arabic": "Arabic",
+    "turkish": "Turkish",
+    "korean": "Korean"
+  },
+  "industries": {
+    "technology": "Technology",
+    "healthcare": "Healthcare",
+    "finance": "Finance",
+    "legal": "Legal",
+    "manufacturing": "Manufacturing",
+    "retail": "Retail",
+    "education": "Education",
+    "government": "Government"
+  },
+  "forms": {
+    "contact": {
+      "title": "Get in Touch",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "service": "Service Type",
+      "message": "Message",
+      "success": "Thank you! We'll get back to you within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "order": {
+      "title": "Request Translation Quote",
+      "sourceLanguage": "Source Language",
+      "targetLanguage": "Target Language",
+      "documentType": "Document Type",
+      "wordCount": "Word Count",
+      "deadline": "Deadline",
+      "fileUpload": "Upload Files",
+      "additionalNotes": "Additional Notes"
+    },
+    "validation": {
+      "required": "This field is required",
+      "emailInvalid": "Please enter a valid email",
+      "phoneInvalid": "Please enter a valid phone number"
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "resources": "Resources",
+    "contact": "Contact",
+    "copyright": "© 2024 Global Translation Services. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

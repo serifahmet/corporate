@@ -1,0 +1,125 @@
+{
+  "common": {
+    "companyName": "Global Übersetzungsdienste",
+    "navigation": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "services": "Dienstleistungen",
+      "languages": "Sprachen",
+      "industries": "Branchen",
+      "contact": "Kontakt"
+    },
+    "cta": {
+      "getQuote": "Angebot einholen",
+      "learnMore": "Mehr erfahren",
+      "contactUs": "Kontaktieren Sie uns",
+      "submit": "Absenden",
+      "orderNow": "Jetzt bestellen"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "Professionelle Übersetzungs- und Lokalisierungsdienste",
+      "subtitle": "Vertraut von Fortune 500 Unternehmen weltweit für präzise, kulturell angepasste Inhalte in über 100 Sprachen",
+      "cta": "Heute beginnen"
+    },
+    "about": {
+      "title": "Exzellenz in Sprachdienstleistungen",
+      "description": "Mit über 20 Jahren Erfahrung bieten wir umfassende Übersetzungs-, Lokalisierungs- und Dolmetscherdienste für globale Unternehmen.",
+      "features": {
+        "quality": "ISO 17100:2015 zertifizierte Qualität",
+        "experts": "10.000+ professionelle Linguisten",
+        "languages": "100+ unterstützte Sprachen",
+        "availability": "24/7 Projektunterstützung"
+      }
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "translation": {
+        "title": "Dokumentenübersetzung",
+        "description": "Professionelle Übersetzung für rechtliche, technische, medizinische und geschäftliche Dokumente"
+      },
+      "localization": {
+        "title": "Software-Lokalisierung",
+        "description": "Passen Sie Ihre Software, Apps und Spiele für globale Märkte an"
+      },
+      "interpreting": {
+        "title": "Dolmetscherdienste",
+        "description": "Vor-Ort-, Fern- und Konferenzdolmetscherlösungen"
+      }
+    },
+    "languages": {
+      "title": "Unterstützte Sprachen",
+      "subtitle": "Wählen Sie eine Sprache, um mehr über unsere spezialisierten Dienstleistungen zu erfahren"
+    },
+    "industries": {
+      "title": "Branchen, die wir bedienen",
+      "subtitle": "Spezialisierte Expertise in verschiedenen Sektoren"
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Vertraut von führenden Unternehmen weltweit"
+    }
+  },
+  "languages": {
+    "english": "Englisch",
+    "german": "Deutsch",
+    "french": "Französisch",
+    "spanish": "Spanisch",
+    "italian": "Italienisch",
+    "portuguese": "Portugiesisch",
+    "russian": "Russisch",
+    "chinese": "Chinesisch",
+    "japanese": "Japanisch",
+    "arabic": "Arabisch",
+    "turkish": "Türkisch",
+    "korean": "Koreanisch"
+  },
+  "industries": {
+    "technology": "Technologie",
+    "healthcare": "Gesundheitswesen",
+    "finance": "Finanzen",
+    "legal": "Recht",
+    "manufacturing": "Fertigung",
+    "retail": "Einzelhandel",
+    "education": "Bildung",
+    "government": "Regierung"
+  },
+  "forms": {
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "company": "Firmenname",
+      "service": "Dienstleistungstyp",
+      "message": "Nachricht",
+      "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut."
+    },
+    "order": {
+      "title": "Übersetzungsangebot anfordern",
+      "sourceLanguage": "Ausgangssprache",
+      "targetLanguage": "Zielsprache",
+      "documentType": "Dokumenttyp",
+      "wordCount": "Wortanzahl",
+      "deadline": "Frist",
+      "fileUpload": "Dateien hochladen",
+      "additionalNotes": "Zusätzliche Anmerkungen"
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+      "phoneInvalid": "Bitte geben Sie eine gültige Telefonnummer ein"
+    }
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "resources": "Ressourcen",
+    "contact": "Kontakt",
+    "copyright": "© 2024 Global Übersetzungsdienste. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen"
+  }
+}
