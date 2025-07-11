@@ -101,9 +101,6 @@ export default function HomePage() {
               <button className="text-gray-300 hover:text-white transition-colors">
                 {t('common.cta.signIn')}
               </button>
-              <button className="btn-outline">
-                {t('common.cta.signUp')}
-              </button>
             </div>
           </div>
         </nav>
