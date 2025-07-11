@@ -267,24 +267,34 @@ header.sticky {
   animation: slide 30s linear infinite;
   display: flex;
   gap: 4rem;
+  width: calc(200% + 4rem);
 }
 
 .logos-container {
   overflow: hidden;
-  mask: linear-gradient(
-    to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
-  -webkit-mask: linear-gradient(
-    to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
+  width: 100%;
+  position: relative;
+}
+
+.logos-container::before,
+.logos-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logos-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.logos-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
 }
 
 .logo-item {
@@ -293,7 +303,7 @@ header.sticky {
   align-items: center;
   justify-content: center;
   height: 80px;
-  width: 160px;
+  width: 200px;
   opacity: 0.6;
   transition: opacity 0.3s ease;
   filter: grayscale(100%);

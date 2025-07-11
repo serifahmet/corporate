@@ -329,7 +329,7 @@ export default function HomePage() {
       </section>
 
       {/* Languages Section */}
-      <section id="languages" className="py-24" style={{backgroundColor: 'var(--bg-secondary)'}}>
+      <section id="languages" className="py-24" style={{backgroundColor: 'var(--bg-secondary)', minHeight: '400px'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4" style={{color: 'var(--text-primary)'}}>
@@ -406,7 +406,7 @@ export default function HomePage() {
       </section> */}
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24" style={{backgroundColor: 'var(--bg-primary)'}}>
+      <section id="testimonials" className="py-24" style={{backgroundColor: 'var(--bg-primary)', minHeight: '400px'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4" style={{color: 'var(--text-primary)'}}>
