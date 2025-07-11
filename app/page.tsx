@@ -1,6 +1,7 @@
 'use client';
 
 import {useTranslations} from 'next-intl';
+import Link from 'next/link';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import NavigationDropdown from '../components/NavigationDropdown';
 import Script from 'next/script';
@@ -53,9 +54,9 @@ export default function HomePage() {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="text-2xl font-bold text-white">
+            <Link href="/" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
               {t('common.companyName')}
-            </div>
+            </Link>
             
             {/* Center Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
