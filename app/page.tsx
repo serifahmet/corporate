@@ -49,7 +49,7 @@ export default function HomePage() {
       />
       <div className="min-h-screen bg-[#0d1117]">
       {/* Header */}
-      <header className="border-b border-[#30363d]">
+      <header className="sticky top-0 z-50 bg-[#0d1117] border-b border-[#30363d] backdrop-blur-sm bg-opacity-90">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
