@@ -163,18 +163,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Code Preview Section */}
+      {/* Trusted By Section - Sliding Logos */}
       <section className="py-16 relative">
         <div className="container mx-auto px-6">
-          <div className="glass-effect p-8 max-w-4xl mx-auto">
-            <div className="flex items-start space-x-4">
-              <div className="text-yellow-400 text-2xl">💡</div>
-              <div>
-                <p className="text-gray-300 mb-2">{`// Örnek çeviri kodu`}</p>
-                <p className="text-white font-mono">
-                  translate(<span className="text-green-400">{`"Merhaba Dünya"`}</span>, <span className="text-blue-400">{`"tr"`}</span>, <span className="text-blue-400">{`"en"`}</span>) 
-                  <span className="text-gray-500">{` // "Hello World"`}</span>
-                </p>
+          <div className="text-center mb-12">
+            <p className="text-lg" style={{color: 'var(--text-secondary)'}}>
+              Trusted by leading companies worldwide
+            </p>
+          </div>
+          <div className="logos-container">
+            <div className="logos-slider">
+              {/* First set of logos */}
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Microsoft</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Google</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Amazon</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Apple</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Netflix</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Meta</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Tesla</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Spotify</div>
+              </div>
+              
+              {/* Duplicate set for seamless loop */}
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Microsoft</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Google</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Amazon</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Apple</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Netflix</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Meta</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Tesla</div>
+              </div>
+              <div className="logo-item">
+                <div className="text-4xl font-bold" style={{color: 'var(--text-muted)'}}>Spotify</div>
               </div>
             </div>
           </div>
@@ -182,28 +230,28 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-[#0d1117]">
+      <section id="about" className="py-24" style={{backgroundColor: 'var(--bg-secondary)'}}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold mb-6" style={{color: 'var(--text-primary)'}}>
                 {t('homepage.about.title')}
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
+              <p className="text-lg mb-8" style={{color: 'var(--text-secondary)'}}>
                 {t('homepage.about.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <p className="text-gray-300">{t('homepage.about.features.quality')}</p>
+                  <span className="text-xl" style={{color: 'var(--accent-color)'}}>✓</span>
+                  <p style={{color: 'var(--text-secondary)'}}>{t('homepage.about.features.quality')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <p className="text-gray-300">{t('homepage.about.features.experts')}</p>
+                  <span className="text-xl" style={{color: 'var(--accent-color)'}}>✓</span>
+                  <p style={{color: 'var(--text-secondary)'}}>{t('homepage.about.features.experts')}</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <p className="text-gray-300">{t('homepage.about.features.languages')}</p>
+                  <span className="text-xl" style={{color: 'var(--accent-color)'}}>✓</span>
+                  <p style={{color: 'var(--text-secondary)'}}>{t('homepage.about.features.languages')}</p>
                 </div>
               </div>
             </div>
@@ -280,14 +328,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Languages Section - Hidden for now */}
-      {/* <section id="languages" className="py-24 bg-[#0d1117]">
+      {/* Languages Section */}
+      <section id="languages" className="py-24" style={{backgroundColor: 'var(--bg-secondary)'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold mb-4" style={{color: 'var(--text-primary)'}}>
               {t('homepage.languages.title')}
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-lg" style={{color: 'var(--text-secondary)'}}>
               {t('homepage.languages.subtitle')}
             </p>
           </div>
@@ -306,21 +354,21 @@ export default function HomePage() {
               { flag: '🇹🇷', key: 'turkish' },
               { flag: '🇰🇷', key: 'korean' }
             ].map((lang) => (
-              <div key={lang.key} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer group">
+              <div key={lang.key} className="p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer group border border-[#30363d]" style={{backgroundColor: 'var(--bg-primary)'}}>
                 <div className="flex items-center space-x-4">
                   <span className="text-4xl">{lang.flag}</span>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold transition-colors" style={{color: 'var(--text-primary)'}}>
                       {t(`languages.${lang.key}`)}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">Professional Services</p>
+                    <p className="text-sm mt-1" style={{color: 'var(--text-muted)'}}>Professional Services</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Industries Section - Hidden for now */}
       {/* <section id="industries" className="py-24 bg-white">
@@ -357,14 +405,14 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      {/* Testimonials Section - Hidden for now */}
-      {/* <section id="testimonials" className="py-24 bg-gray-50">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24" style={{backgroundColor: 'var(--bg-primary)'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold mb-4" style={{color: 'var(--text-primary)'}}>
               What Our Clients Say
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg" style={{color: 'var(--text-secondary)'}}>
               Trusted by leading companies worldwide
             </p>
           </div>
@@ -392,28 +440,28 @@ export default function HomePage() {
                 rating: 5
               }
             ].map((testimonial) => (
-              <div key={testimonial.name} className="bg-white rounded-lg shadow-lg p-8 relative">
-                <div className="text-3xl text-blue-100 absolute top-6 left-6">&ldquo;</div>
+              <div key={testimonial.name} className="rounded-lg shadow-lg p-8 relative border border-[#30363d]" style={{backgroundColor: 'var(--bg-secondary)'}}>
+                <div className="text-3xl absolute top-6 left-6" style={{color: 'var(--accent-color)', opacity: 0.3}}>&ldquo;</div>
                 <div className="relative z-10">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-lg">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 italic">
+                  <p className="mb-6 italic" style={{color: 'var(--text-secondary)'}}>
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
-                  <div className="border-t pt-4">
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                    <p className="text-sm text-blue-600">{testimonial.company}</p>
+                  <div className="border-t pt-4" style={{borderColor: 'var(--border-color)'}}>
+                    <p className="font-semibold" style={{color: 'var(--text-primary)'}}>{testimonial.name}</p>
+                    <p className="text-sm" style={{color: 'var(--text-muted)'}}>{testimonial.role}</p>
+                    <p className="text-sm" style={{color: 'var(--accent-color)'}}>{testimonial.company}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Contact Section - Hidden for now */}
       {/* <section id="contact" className="py-24 bg-white">

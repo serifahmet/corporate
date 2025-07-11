@@ -252,3 +252,54 @@ header.sticky {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);
 }
+
+/* Sliding logos animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-slider {
+  animation: slide 30s linear infinite;
+  display: flex;
+  gap: 4rem;
+}
+
+.logos-container {
+  overflow: hidden;
+  mask: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+}
+
+.logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 160px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.logo-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
