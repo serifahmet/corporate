@@ -23,7 +23,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600">
+      <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
         <div className="text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Translation & Localization Services
