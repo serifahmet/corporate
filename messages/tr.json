@@ -1,6 +1,6 @@
 {
   "common": {
-    "companyName": "Global Çeviri Hizmetleri",
+    "companyName": "cevirim.com",
     "navigation": {
       "home": "Ana Sayfa",
       "about": "Hakkımızda",
@@ -118,7 +118,7 @@
     "services": "Hizmetler",
     "resources": "Kaynaklar",
     "contact": "İletişim",
-    "copyright": "© 2024 Global Çeviri Hizmetleri. Tüm hakları saklıdır.",
+    "copyright": "© 2024 cevirim.com. Tüm hakları saklıdır.",
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları"
   }

@@ -4,8 +4,8 @@ import LocaleProvider from "../components/LocaleProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Global Translation Services - Professional Translation & Localization",
-  description: "Trusted by Fortune 500 companies for accurate translation, localization, and interpreting services in over 100 languages.",
+  title: "cevirim.com - Profesyonel Çeviri ve Yerelleştirme Hizmetleri",
+  description: "100'den fazla dilde doğru çeviri, yerelleştirme ve tercümanlık hizmetleri için Fortune 500 şirketleri tarafından güvenilir.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

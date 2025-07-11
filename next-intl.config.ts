@@ -1,9 +1,9 @@
 const config = {
   // A list of all locales that are supported
-  locales: ['en', 'tr'],
+  locales: ['tr', 'en'],
  
   // Used when no locale matches
-  defaultLocale: 'en'
+  defaultLocale: 'tr'
 };
 
 export default config;

@@ -6,8 +6,8 @@ import {useLocale} from 'next-intl';
 type Locale = 'en' | 'tr';
 
 const languages = [
-  { code: 'en' as Locale, name: 'English', flag: '🇺🇸' },
   { code: 'tr' as Locale, name: 'Türkçe', flag: '🇹🇷' },
+  { code: 'en' as Locale, name: 'English', flag: '🇺🇸' },
 ];
 
 export default function LanguageSwitcher() {

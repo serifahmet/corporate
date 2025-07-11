@@ -10,14 +10,14 @@ interface LocaleProviderProps {
 }
 
 export default function LocaleProvider({children}: LocaleProviderProps) {
-  const [locale, setLocale] = useState<Locale>('en');
+  const [locale, setLocale] = useState<Locale>('tr');
   const [messages, setMessages] = useState<Record<string, unknown> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadLocaleData = async () => {
-      // Get stored language preference or default to 'en'
-      const storedLocale = (localStorage.getItem('preferredLanguage') as Locale) || 'en';
+      // Get stored language preference or default to 'tr'
+      const storedLocale = (localStorage.getItem('preferredLanguage') as Locale) || 'tr';
       
       try {
         // Dynamically import the messages for the current locale
@@ -25,10 +25,10 @@ export default function LocaleProvider({children}: LocaleProviderProps) {
         setMessages(messagesModule.default);
         setLocale(storedLocale);
       } catch {
-        // Fallback to English if loading fails
-        const messagesModule = await import(`../messages/en.json`);
+        // Fallback to Turkish if loading fails
+        const messagesModule = await import(`../messages/tr.json`);
         setMessages(messagesModule.default);
-        setLocale('en');
+        setLocale('tr');
       }
       
       setIsLoading(false);

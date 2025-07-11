@@ -1,6 +1,6 @@
 {
   "common": {
-    "companyName": "Global Translation Services",
+    "companyName": "cevirim.com",
     "navigation": {
       "home": "Home",
       "about": "About",
@@ -118,7 +118,7 @@
     "services": "Services",
     "resources": "Resources",
     "contact": "Contact",
-    "copyright": "© 2024 Global Translation Services. All rights reserved.",
+    "copyright": "© 2024 cevirim.com. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   }
