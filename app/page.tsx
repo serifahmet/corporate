@@ -77,15 +77,79 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image - Now on the left */}
+            <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden shadow-xl order-2 lg:order-1">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
+                Language Services Overview
+              </div>
+            </div>
+
+            {/* Text Content - Now on the right */}
+            <div className="order-1 lg:order-2">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                Our Services
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-blue-600 text-2xl mt-1">📄</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        Document Translation
+                      </h3>
+                      <p className="text-gray-600">
+                        Professional translation for legal, technical, medical, and business documents
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-blue-600 text-2xl mt-1">💻</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        Software Localization
+                      </h3>
+                      <p className="text-gray-600">
+                        Adapt your software, apps, and games for global markets
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer group">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-blue-600 text-2xl mt-1">🎧</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        Interpreting Services
+                      </h3>
+                      <p className="text-gray-600">
+                        On-site, remote, and conference interpreting solutions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Languages Section */}
-      <section id="languages" className="py-24 bg-white">
+      <section id="languages" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Languages We Support
             </h2>
             <p className="text-lg text-gray-600">
-              Professional translation services in 12 major languages
+              Select a language to learn more about our specialized services
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -103,16 +167,166 @@ export default function HomePage() {
               { flag: '🇹🇷', name: 'Turkish' },
               { flag: '🇰🇷', name: 'Korean' }
             ].map((lang) => (
-              <div key={lang.name} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer">
+              <div key={lang.name} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 cursor-pointer group">
                 <div className="flex items-center space-x-4">
                   <span className="text-4xl">{lang.flag}</span>
                   <div>
-                    <h3 className="text-xl font-semibold">{lang.name}</h3>
-                    <p className="text-sm text-gray-500">Professional Services</p>
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {lang.name}
+                    </h3>
+                    <p className="text-sm text-gray-500 mt-1">Professional Services</p>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section id="industries" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-lg text-gray-600">
+              Specialized expertise across diverse sectors
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: '💻', name: 'Technology' },
+              { icon: '🏥', name: 'Healthcare' },
+              { icon: '💰', name: 'Finance' },
+              { icon: '⚖️', name: 'Legal' },
+              { icon: '🏭', name: 'Manufacturing' },
+              { icon: '🛍️', name: 'Retail' },
+              { icon: '🎓', name: 'Education' },
+              { icon: '🏛️', name: 'Government' }
+            ].map((industry) => (
+              <div key={industry.name} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 transition-colors cursor-pointer group">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
+                  {industry.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {industry.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-gray-600">
+              Trusted by leading companies worldwide
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Sarah Johnson',
+                company: 'Tech Innovations Inc.',
+                role: 'VP of Global Operations',
+                content: 'Outstanding service! Their team delivered accurate translations for our software localization project ahead of schedule. Highly recommended.',
+                rating: 5
+              },
+              {
+                name: 'Dr. Michael Chen',
+                company: 'Global Medical Solutions',
+                role: 'Director of International Affairs',
+                content: 'Professional and reliable. They handle our medical document translations with exceptional accuracy and attention to detail.',
+                rating: 5
+              },
+              {
+                name: 'Maria Rodriguez',
+                company: 'International Law Associates',
+                role: 'Senior Partner',
+                content: 'We trust them with all our legal translation needs. Their certified translators understand the nuances of legal terminology perfectly.',
+                rating: 5
+              }
+            ].map((testimonial) => (
+              <div key={testimonial.name} className="bg-white rounded-lg shadow-lg p-8 relative">
+                <div className="text-3xl text-blue-100 absolute top-6 left-6">&ldquo;</div>
+                <div className="relative z-10">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 italic">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <p className="text-sm text-blue-600">{testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-lg text-gray-600">
+              Contact us for a free consultation and quote
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <form className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                  <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                  <input type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                  <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">Select a service</option>
+                    <option value="document">Document Translation</option>
+                    <option value="localization">Software Localization</option>
+                    <option value="interpreting">Interpreting Services</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                </div>
+              </div>
+              <div className="mt-6">
+                <button type="submit" className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
+                  Send Message
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
