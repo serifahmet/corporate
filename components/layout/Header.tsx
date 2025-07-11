@@ -2,22 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const t = useTranslations('common');
 
   const navItems = [
-    { href: '/', label: t('navigation.home') },
-    { href: '/about', label: t('navigation.about') },
-    { href: '/services', label: t('navigation.services') },
-    { href: '/languages', label: t('navigation.languages') },
-    { href: '/industries', label: t('navigation.industries') },
-    { href: '/contact', label: t('navigation.contact') },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/languages', label: 'Languages' },
+    { href: '/industries', label: 'Industries' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -27,7 +24,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {t('companyName')}
+              Global Translation Services
             </span>
           </Link>
 
@@ -42,18 +39,16 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <LanguageSwitcher />
             <Link
               href="/contact"
               className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
             >
-              {t('cta.getQuote')}
+              Get Quote
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-4">
-            <LanguageSwitcher />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -90,7 +85,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="block mx-4 mt-4 px-4 py-3 bg-blue-600 text-white text-center rounded-lg hover:bg-blue-700 transition-colors duration-200"
                 >
-                  {t('cta.getQuote')}
+                  Get Quote
                 </Link>
               </div>
             </motion.div>
