@@ -55,8 +55,12 @@ export default function HomePage() {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-bold transition-colors" style={{color: 'var(--text-primary)'}}>
-              {t('common.companyName')}
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/logo.svg" 
+                alt={t('common.companyName')} 
+                className="h-8 w-auto transition-all hover:opacity-80 logo-theme"
+              />
             </Link>
             
             {/* Center Navigation */}

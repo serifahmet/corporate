@@ -313,3 +313,12 @@ header.sticky {
   opacity: 1;
   filter: grayscale(0%);
 }
+
+/* Logo theme styling */
+.logo-theme {
+  filter: brightness(0) saturate(100%) invert(1);
+}
+
+[data-theme="light"] .logo-theme {
+  filter: brightness(0) saturate(100%) invert(0);
+}
