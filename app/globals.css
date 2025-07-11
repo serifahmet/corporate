@@ -5,18 +5,52 @@
   box-sizing: border-box;
 }
 
+/* CSS Variables for themes */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #ffffff;
+  --border-color: #e1e5e9;
+  --text-primary: #24292f;
+  --text-secondary: #656d76;
+  --text-muted: #8b949e;
+  --accent-color: #0969da;
+  --accent-hover: #0860ca;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --border-color: #30363d;
+  --text-primary: #ffffff;
+  --text-secondary: #b1b2b3;
+  --text-muted: #6e7681;
+  --accent-color: #22c55e;
+  --accent-hover: #16a34a;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: #ffffff;
-  background-color: #0d1117;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hero gradient background */
 .hero-gradient {
-  background: radial-gradient(ellipse at center top, #1f1f2e 0%, #0d1117 60%);
+  background: radial-gradient(ellipse at center top, var(--bg-secondary) 0%, var(--bg-primary) 60%);
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="dark"] .hero-gradient {
+  background: radial-gradient(ellipse at center top, #1f1f2e 0%, #0d1117 60%);
+}
+
+[data-theme="light"] .hero-gradient {
+  background: radial-gradient(ellipse at center top, #f0f9ff 0%, #ffffff 60%);
 }
 
 /* Floating animation */
@@ -93,7 +127,7 @@ header.sticky {
 
 /* Button styles */
 .btn-primary {
-  background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(180deg, var(--accent-color) 0%, var(--accent-hover) 100%);
   color: white;
   font-weight: 500;
   padding: 12px 24px;
@@ -108,20 +142,28 @@ header.sticky {
   box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
 }
 
+[data-theme="light"] .btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(9, 105, 218, 0.3);
+}
+
 .btn-outline {
   background: transparent;
-  color: #b1b2b3;
+  color: var(--text-secondary);
   font-weight: 500;
   padding: 12px 24px;
   border-radius: 6px;
   transition: all 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
   cursor: pointer;
 }
 
 .btn-outline:hover {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
+  border-color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .btn-outline:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -131,8 +173,8 @@ header.sticky {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 8px;
   min-width: 200px;
@@ -141,6 +183,10 @@ header.sticky {
   transition: all 0.2s ease;
   margin-top: 8px;
   z-index: 60;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .dropdown-menu {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -152,12 +198,57 @@ header.sticky {
 .dropdown-item {
   padding: 8px 16px;
   border-radius: 4px;
-  color: #b1b2b3;
+  color: var(--text-secondary);
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
   background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+}
+
+/* Theme-aware text styles */
+.nav-link {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* Language switcher styles */
+.lang-button {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.lang-button:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.lang-dropdown {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.lang-item {
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.lang-item:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.lang-item.active {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
 }

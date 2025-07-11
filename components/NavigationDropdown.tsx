@@ -35,7 +35,7 @@ export default function NavigationDropdown({ label, items }: NavigationDropdownP
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors py-2 px-3"
+        className="flex items-center space-x-1 nav-link py-2 px-3"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{label}</span>

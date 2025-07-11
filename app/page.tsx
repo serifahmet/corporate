@@ -4,6 +4,7 @@ import {useTranslations} from 'next-intl';
 import Link from 'next/link';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import NavigationDropdown from '../components/NavigationDropdown';
+import ThemeToggle from '../components/ThemeToggle';
 import Script from 'next/script';
 
 export default function HomePage() {
@@ -48,13 +49,13 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen bg-[#0d1117]">
+      <div className="min-h-screen" style={{backgroundColor: 'var(--bg-primary)'}}>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#0d1117] border-b border-[#30363d] backdrop-blur-sm bg-opacity-90">
+      <header className="sticky top-0 z-50 backdrop-blur-sm bg-opacity-90" style={{backgroundColor: 'var(--bg-primary)', borderBottom: '1px solid var(--border-color)'}}>
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
+            <Link href="/" className="text-2xl font-bold transition-colors" style={{color: 'var(--text-primary)'}}>
               {t('common.companyName')}
             </Link>
             
@@ -87,18 +88,19 @@ export default function HomePage() {
                   { label: t('navigation.dropdown.apiDocs'), href: '#' },
                 ]}
               />
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="#" className="nav-link">
                 {t('navigation.enterprise')}
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="#" className="nav-link">
                 {t('navigation.pricing')}
               </a>
             </div>
             
             {/* Right side buttons */}
             <div className="flex items-center space-x-4">
+              <ThemeToggle />
               <LanguageSwitcher />
-              <button className="text-gray-300 hover:text-white transition-colors">
+              <button className="nav-link">
                 {t('common.cta.signIn')}
               </button>
             </div>
@@ -109,10 +111,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <section id="home" className="hero-gradient min-h-[90vh] flex items-center justify-center relative">
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white max-w-5xl mx-auto leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-5xl mx-auto leading-tight" style={{color: 'var(--text-primary)'}}>
             {t('homepage.hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-12 text-[#b1b2b3] max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto" style={{color: 'var(--text-secondary)'}}>
             {t('homepage.hero.subtitle')}
           </p>
           

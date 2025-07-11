@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import LocaleProvider from "../components/LocaleProvider";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -57,9 +58,11 @@ export default function RootLayout({
           src="https://cdn.tailwindcss.com" 
           strategy="beforeInteractive"
         />
-        <LocaleProvider>
-          {children}
-        </LocaleProvider>
+        <ThemeProvider>
+          <LocaleProvider>
+            {children}
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
